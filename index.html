@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Shaders - Demo</title>
+	<style type="text/css">
+	    body {
+	        font-family: Arial, Tahoma;
+	    }
+	    .waving      {
+            filter: custom(url('wave.vs'), 20 20, phase 0, amplitude 50);
+            <!--wave.vs is the name of a CSS Shader-->
+            <!--other examples of CSS Shaders are: book.vs, distort.vs, etc.-->
+            transition-property: filter;
+            transition-duration: 0.2s;
+}
+
+        .waving:hover {
+            filter: custom(url('wave.vs'), 20 20, phase 90, amplitude 20);
+        }
+	</style>
+</head>
+
+<body>
+<h1>CSS Shaders</h1>
+
+<B>In a nutshell:</B><BR>
+Allows you to manipulate pixels for a more "cinematic effect" using different types of CSS Shader types.  A few examples fpimd were: book.vs, distort.vs, wobble.vs, etc.<BR><BR>
+
+** Webkit is still in development.<BR><BR>
+
+For more info:<BR>
+<a href="http://dvcs.w3.org/hg/FXTF/raw-file/tip/custom/index.html">http://dvcs.w3.org/hg/FXTF/raw-file/tip/custom/index.html</a>
+
+<ul>
+    <li>Using different types of "shaders" you can manipulate pixels/images.
+    <li>Images are manipulated by using the "vertex mesh"
+        <li>Vertex mesh defines the vertices/corners of the images.
+        <li>The shaders are then applied to the image and manipulate the image by referring to the vertex mesh."
+</ul>
+
+<h2>** See source of this page for a brief example of how CSS Shaders are implemented.</h2>
+
+</body>
+</html>
